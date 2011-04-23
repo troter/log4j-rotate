@@ -18,10 +18,10 @@ log4j用RollingFileAppender
 
 log4j.logger.rotateperdaydirectory=INFO, rotateperdaydirectory
 
-log4j.appender.pageview=jp.troter.log4j.DailyDirRollingFileAppender
-log4j.appender.pageview.File=/var/log/rotateperdaydirectory.log
-log4j.appender.pageview.DatePattern=yyyy/MM/dd/.HH
-log4j.appender.pageview.Append=true
-log4j.appender.pageview.layout=org.apache.log4j.PatternLayout
-log4j.appender.pageview.layout.ConversionPattern=%d %m%n
+log4j.appender.rotateperdaydirectory=jp.troter.log4j.DailyDirRollingFileAppender
+log4j.appender.rotateperdaydirectory.File=/var/log/rotateperdaydirectory.log
+log4j.appender.rotateperdaydirectory.DatePattern=yyyy/MM/dd/.HH
+log4j.appender.rotateperdaydirectory.Append=true
+log4j.appender.rotateperdaydirectory.layout=org.apache.log4j.PatternLayout
+log4j.appender.rotateperdaydirectory.layout.ConversionPattern=%d %m%n
 
