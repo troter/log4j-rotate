@@ -1,0 +1,27 @@
+log4j用RollingFileAppender 
+
+- maven の記述
+
+    <repository>
+      <id>troter.jp/release</id>
+      <name>TROTER.JP Release Maven2 Repository</name>
+      <url>http://troter.jp/maven2/release</url>
+    </repository>
+
+    <dependency>
+      <groupId>jp.troter</groupId>
+      <artifactId>log4j-rotate</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+- log4j.properties (DailyDirRollingFileAppenderを利用する場合)
+
+log4j.logger.rotateperdaydirectory=INFO, rotateperdaydirectory
+
+log4j.appender.pageview=jp.troter.log4j.DailyDirRollingFileAppender
+log4j.appender.pageview.File=/var/log/rotateperdaydirectory.log
+log4j.appender.pageview.DatePattern=yyyy/MM/dd/.HH
+log4j.appender.pageview.Append=true
+log4j.appender.pageview.layout=org.apache.log4j.PatternLayout
+log4j.appender.pageview.layout.ConversionPattern=%d %m%n
+
